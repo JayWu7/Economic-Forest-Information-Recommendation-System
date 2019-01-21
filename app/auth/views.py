@@ -18,3 +18,11 @@ def login():
 @auth.route('/logout', methods=['GET'])
 def logout():
     pass
+
+@auth.route('/password_reset_request')
+def password_reset_request():
+    pass
+
+@auth.route('/register')
+def register():
+    pass
