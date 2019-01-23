@@ -15,7 +15,7 @@ class LoginForm(FlaskForm):
 
 class RegisterForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Length
-    (1, 4), Email()])
+    (1, 64), Email()])
     username = StringField('Username', validators=[DataRequired(),
                                                    Length(1, 64),
                                                    Regexp('^[A-Za-z[A-Za-z0-9_.]*$]',
@@ -26,3 +26,8 @@ class RegisterForm(FlaskForm):
                              validators=[DataRequired(), EqualTo('password_again', message="passwords unmatch")])
     password_again = PasswordField('Confirm password')
     submit = SubmitField('Register')
+
+
+class ResetPasswordForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Length(1, 64), Email()])
+    submit = SubmitField('Reset Password')
