@@ -1,7 +1,8 @@
-from flask import render_template
+from flask import render_template, url_for, redirect
 from . import auth
+from .. import db
 from .forms import LoginForm, RegisterForm, ResetPasswordForm
-
+from ..models import User
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
@@ -28,5 +29,11 @@ def password_reset_request():
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
-        pass
+        user = User(email=form.email.data,
+                    username=form.username.data,
+                    password=form.password.data)
+        db.session.add(user)
+        db.session.commit()
+        #'''email certification'''
+        return redirect(url_for('.login'))
     return render_template('auth/register.html', form=form)

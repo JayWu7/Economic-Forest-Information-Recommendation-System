@@ -16,5 +16,5 @@ class DevelopmentConfig(Config):
                               'sqlite:////' + os.path.join(basedir, 'data-dev.sqlite')
 
 config = {
-    'development': DevelopmentConfig
+    'development':DevelopmentConfig
 }
