@@ -3,6 +3,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, IntegerField
 from wtforms.validators import DataRequired, Length, Email, Regexp, EqualTo, NumberRange
 from wtforms import ValidationError
+from ..models import User
 
 
 class LoginForm(FlaskForm):
@@ -27,7 +28,41 @@ class RegisterForm(FlaskForm):
     password_again = PasswordField('Confirm password',validators=[DataRequired()])
     submit = SubmitField('Register')
 
+    def validate_email(self,field):
+        if User.query.filter_by(email=field.data).first():
+            raise ValidationError('Email already registered.')
 
-class ResetPasswordForm(FlaskForm):
+    def validate_username(self,field):
+        if User.query.filter_by(username=field.data).first():
+            raise ValidationError('Username already in use.')
+
+
+class ChangePasswordForm(FlaskForm):
+    old_password = PasswordField('Old password', validators=[DataRequired()])
+    password = PasswordField('New password', validators=[
+        DataRequired(), EqualTo('password_again', message="passwords must match")
+    ])
+    password_again = PasswordField('Confirm new password', validators=[DataRequired()])
+    submit = SubmitField('Update Password')
+
+
+class PasswordResetRequestForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Length(1, 64), Email()])
     submit = SubmitField('Reset Password')
+
+class ChangeEmailForm(FlaskForm):
+    email = StringField('New Email', validators=[DataRequired(), Length(1,64),
+                                                 Email()])
+    password = PasswordField('New password', validators=[
+        DataRequired(), EqualTo('password_agaim', message="passwords must match")
+    ])
+    password_again = PasswordField('Confirm new password', validators=[DataRequired()])
+    submit = SubmitField('Update Password')
+
+    def validate_email(self,field):
+        if User.query.filter_by(email=field.data).first():
+            raise ValidationError('Email already registered.')
+
+
+
+
