@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b190d2d-cfe7-41f3-8ef3-78462fd26bca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/crawel/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawel/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawel/spider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawel/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawel/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawel/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawel/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawel/spider.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,10 +17,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crawel/spider.py">
+        <entry file="file://$PROJECT_DIR$/spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            <state relative-caret-position="135">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/lib/python3.6/xml/etree/ElementTree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8865">
+              <caret line="1046" column="24" selection-start-line="1046" selection-start-column="24" selection-end-line="1046" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/lib/python3.6/http/client.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="10538">
+              <caret line="768" column="8" selection-start-line="768" selection-start-column="8" selection-end-line="768" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -26,35 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/lib/python3.6/urllib/request.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-495">
-              <caret line="145" column="12" lean-forward="true" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/lib/python3.6/socket.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="685" column="29" selection-start-line="685" selection-start-column="29" selection-end-line="685" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-34773823/builtins.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="767" column="8" selection-start-line="767" selection-start-column="8" selection-end-line="767" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawel/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="207">
+              <caret line="175" selection-start-line="175" selection-end-line="175" />
             </state>
           </provider>
         </entry>
@@ -62,8 +58,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawel/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="35" lean-forward="true" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawel/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -86,6 +91,7 @@
       <find>Regex</find>
       <find>class Equal</find>
       <find>class Length</find>
+      <find>html</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -116,8 +122,9 @@
         <option value="$PROJECT_DIR$/app/templates/auth/change_password.html" />
         <option value="$PROJECT_DIR$/app/auth/forms.py" />
         <option value="$PROJECT_DIR$/crawel/config.py" />
-        <option value="$PROJECT_DIR$/crawel/__init__.py" />
         <option value="$PROJECT_DIR$/crawel/spider.py" />
+        <option value="$PROJECT_DIR$/crawel/__init__.py" />
+        <option value="$PROJECT_DIR$/spider.py" />
       </list>
     </option>
   </component>
@@ -148,6 +155,81 @@
               <item name="Economic-Forest-Information-Recommendation-System" type="462c0819:PsiDirectoryNode" />
               <item name="crawel" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Economic-Forest-Information-Recommendation-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Economic-Forest-Information-Recommendation-System" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Economic-Forest-Information-Recommendation-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Economic-Forest-Information-Recommendation-System" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Economic-Forest-Information-Recommendation-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Economic-Forest-Information-Recommendation-System" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Economic-Forest-Information-Recommendation-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Economic-Forest-Information-Recommendation-System" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Economic-Forest-Information-Recommendation-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Economic-Forest-Information-Recommendation-System" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="lxml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Economic-Forest-Information-Recommendation-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Economic-Forest-Information-Recommendation-System" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="lxml" type="462c0819:PsiDirectoryNode" />
+              <item name="isoschematron" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Economic-Forest-Information-Recommendation-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="Economic-Forest-Information-Recommendation-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (Economic-Forest-Information-Recommendation-System) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="Economic-Forest-Information-Recommendation-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (Economic-Forest-Information-Recommendation-System) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Economic-Forest-Information-Recommendation-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (Economic-Forest-Information-Recommendation-System) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
+              <item name="xml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Economic-Forest-Information-Recommendation-System" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (Economic-Forest-Information-Recommendation-System) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
+              <item name="xml" type="462c0819:PsiDirectoryNode" />
+              <item name="etree" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -161,6 +243,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
@@ -176,7 +259,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.flasky">
+  <component name="RunManager" selected="Python.spider">
     <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Economic-Forest-Information-Recommendation-System" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -219,8 +302,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="spider" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Economic-Forest-Information-Recommendation-System" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crawel" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spider.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.spider" />
         <item itemvalue="Python.flasky" />
         <item itemvalue="Python.config" />
       </list>
@@ -241,20 +346,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1509" height="790" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15275909" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34387618" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33443707" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.51884425" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28139183" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32914573" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2375189" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.5954774" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32914573" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -273,13 +377,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask_bootstrap/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="122" column="6" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -364,13 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/auth/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="19" lean-forward="true" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -471,16 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flasky.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -489,16 +569,6 @@
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#1;n#div#1;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#li#0;n#ul#1;n#div#1;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -534,45 +604,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawel/config.py">
+    <entry file="file:///usr/lib/python3.6/socket.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="35" lean-forward="true" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawel/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="10215">
+          <caret line="685" column="29" selection-start-line="685" selection-start-column="29" selection-end-line="685" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-34773823/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="11505">
           <caret line="767" column="8" selection-start-line="767" selection-start-column="8" selection-end-line="767" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3.6/socket.py">
+    <entry file="file://$PROJECT_DIR$/flasky.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="685" column="29" selection-start-line="685" selection-start-column="29" selection-end-line="685" selection-end-column="29" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/auth/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawel/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawel/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/lib/python3.6/urllib/request.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-495">
-          <caret line="145" column="12" lean-forward="true" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="12" />
+        <state relative-caret-position="207">
+          <caret line="175" selection-start-line="175" selection-end-line="175" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawel/spider.py">
+    <entry file="file:///usr/lib/python3.6/http/client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        <state relative-caret-position="10538">
+          <caret line="768" column="8" selection-start-line="768" selection-start-column="8" selection-end-line="768" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/lxml/html/ElementSoup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/lxml/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/xml/etree/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/lib/python3.6/xml/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.6/xml/etree/ElementTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8865">
+          <caret line="1046" column="24" selection-start-line="1046" selection-start-column="24" selection-end-line="1046" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
