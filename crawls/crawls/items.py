@@ -10,7 +10,7 @@ import scrapy
 
 class CrawelsDemandItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
+    name = scrapy.Field()
     company = scrapy.Field()
     start_time = scrapy.Field()
     stop_time = scrapy.Field()

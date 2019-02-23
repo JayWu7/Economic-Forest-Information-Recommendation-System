@@ -6,7 +6,8 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-
+from faker import Faker
+f = Faker()
 
 class CrawlsSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -27,7 +28,7 @@ class CrawlsSpiderMiddleware(object):
         # Should return None or raise an exception.
         return None
 
-    def process_spider_output(self, response, result, spider):
+    def process_spider_output(sxelf, response, result, spider):
         # Called with the results returned from the Spider, after
         # it has processed the response.
 
@@ -78,7 +79,9 @@ class CrawlsDownloaderMiddleware(object):
         # - or return a Request object
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
-        return None
+
+        agent = f.firefox()
+        request.headers['User-Agent'] = agent
 
     def process_response(self, request, response, spider):
         # Called with the response returned from the downloader.
