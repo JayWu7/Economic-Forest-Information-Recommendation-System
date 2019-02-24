@@ -10,6 +10,7 @@ import scrapy
 
 class CrawelsDemandItem(scrapy.Item):
     # define the fields for your item here like:
+    purchase_id = scrapy.Field()
     name = scrapy.Field()
     company = scrapy.Field()
     start_time = scrapy.Field()
@@ -18,6 +19,8 @@ class CrawelsDemandItem(scrapy.Item):
     kinds = scrapy.Field()
     from_url = scrapy.Field()
     other_infor = scrapy.Field()
+    buyer = scrapy.Field()
+    buyer_tel = scrapy.Field()
 
 class CrawelsPlantsItem(scrapy.Item):
     name = scrapy.Field()
@@ -30,3 +33,4 @@ class CrawelsPlantsItem(scrapy.Item):
     characters = scrapy.Field()
     pictures = scrapy.Field()
     from_url = scrapy.Field()
+

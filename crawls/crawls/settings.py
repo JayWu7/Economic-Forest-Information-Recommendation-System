@@ -15,6 +15,9 @@ SPIDER_MODULES = ['crawls.spiders']
 NEWSPIDER_MODULE = 'crawls.spiders'
 
 
+MONGO_URI='localhost'
+MONGO_DB='itao'
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'crawls (+http://www.yourdomain.com)'
 
@@ -64,9 +67,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'crawls.pipelines.CrawlsPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'crawls.pipelines.MongoPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

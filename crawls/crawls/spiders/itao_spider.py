@@ -6,9 +6,6 @@ import json
 class PurchaseDemand(Spider):
     name = 'itao_purchase_demands'
     allowed_domains = ['itaomiao.com']
-    # def __init__(self):
-    #     self.name = 'itao_purchase_demands'
-    #     self.allow_domains = ['itaomiao.com']
 
     def start_requests(self):
         url = 'http://www.itaomiao.com/purchases/getIndexPurchaseList.json'
@@ -21,6 +18,7 @@ class PurchaseDemand(Spider):
         json_str = json.loads(response.body.decode('utf-8'))
         for info in json_str['indexPurchaseList']:
             item = CrawelsDemandItem()
+            item['purchase_id'] = info['id']
             item['name'] = info['purchaseName']
             item['from_url'] = 'http://www.itaomiao.com/purchases/purchaseInfo.itm?id={id}'.format(id=info['id'])
             item['company'] = info['companyName']
@@ -29,6 +27,8 @@ class PurchaseDemand(Spider):
             item['place'] = info['districtName']
             item['kinds'] = info['purchasePlants']
             item['other_infor'] = info['else2']
-            print(item)
+            item['buyer'] = info['buyer']
+            item['buyer_tel'] = info['buyerTel']
+            yield item
 
 
