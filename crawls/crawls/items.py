@@ -23,16 +23,15 @@ class CrawelsDemandItem(scrapy.Item):
     buyer_tel = scrapy.Field()
 
 class CrawelsPlantsItem(scrapy.Item):
+    title = scrapy.Field()
     name = scrapy.Field()
     other_name = scrapy.Field()
     area = scrapy.Field()
-    one_info = scrapy.Field()
-    cultivate_way = scrapy.Field()
+    info = scrapy.Field()
     post_time = scrapy.Field()
     total_amount = scrapy.Field()
     start_sell_num = scrapy.Field()
     price = scrapy.Field()
-    characters = scrapy.Field()
     pictures = scrapy.Field()
     from_url = scrapy.Field()
     company = scrapy.Field()

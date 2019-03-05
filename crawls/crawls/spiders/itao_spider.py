@@ -1,6 +1,6 @@
 from scrapy.spiders import Spider
 from scrapy import FormRequest, Request
-from ..items import CrawelsDemandItem,CrawelsPlantsItem
+from ..items import CrawelsDemandItem, CrawelsPlantsItem
 import json
 
 
@@ -39,7 +39,7 @@ class SupplyCrawl(Spider):
     def start_requests(self):
         url = 'http://www.itaomiao.com/supply/findSupplyList.json'
         for i in range(1, 2):
-            form_data = {'pageNo': str(i), 'rows': '20'}
+            form_data = {'pageNo': str(i), 'rows': '20', 'module': '0', 'flag': 'false', 'orderBy': 'default'}
             yield FormRequest(url=url, formdata=form_data, callback=self.parse_page)
 
     def parse_page(self, response):
@@ -48,11 +48,25 @@ class SupplyCrawl(Spider):
             for plant in supply_list.get('supplyList'):
                 if 'barcode2D' in plant.keys():
                     yield Request(
-                        url='http://www.itaomiao.com/supply/supplyInfo.itm?code={code}'.format(code = plant.get('barcode2D')),
+                        url='http://www.itaomiao.com/supply/supplyInfo.itm?code={code}'.format(
+                            code=plant.get('barcode2D')),
                         callback=self.parse_plant)
 
     def parse_plant(self, response):
         item = CrawelsPlantsItem()
-        item['name'] = response.xpath('//input[@id="mainVariety"]/@value').get()
-        print(item)
+        item['title'] = response.xpath('//h2/text()').get()
+        item['name'] = response.xpath('//h1/text()').getall()[-1].strip()
+        item['other_name'] = response.xpath('//h1/p[1]/text()').get()
+        item['area'] = response.xpath('/html/body/div[3]/div[1]/div/div[3]/ul/li[3]/span/text()').get()
+        item['info'] = response.xpath('//div[@class="ppi_plantsInfo"]/span[position()>1]/text()').getall()
+        item['post_time'] = response.xpath('/html/body/div[3]/div[1]/div/div[3]/ul/li[4]/span/text()').get().strip()
+        item['total_amount'] = response.xpath('//span[@id="plants_amout_lable"]/text()').get().strip()
+        item['start_sell_num'] = response.xpath('/html/body/div[3]/div[1]/div/div[3]/ul/li[6]/text()[2]').re_first('[\d]+')
+        item['price'] = response.xpath('/html/body/div[3]/div[1]/div/div[3]/div[1]/span/text()').get().strip()
+        #todo crawl pictures
+        item['from_url'] = response.url
+        item['company'] = response.xpath('//p[@class="product_com_name"]/@title').get()
+        item['sell_tel'] = response.xpath('/html/body/div[3]/div[1]/div/div[1]/div[2]/ul/li[3]').re_first('([\d]{11})')
+
+
 
