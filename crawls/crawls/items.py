@@ -26,6 +26,8 @@ class CrawelsPlantsItem(scrapy.Item):
     name = scrapy.Field()
     other_name = scrapy.Field()
     area = scrapy.Field()
+    one_info = scrapy.Field()
+    cultivate_way = scrapy.Field()
     post_time = scrapy.Field()
     total_amount = scrapy.Field()
     start_sell_num = scrapy.Field()
@@ -33,4 +35,5 @@ class CrawelsPlantsItem(scrapy.Item):
     characters = scrapy.Field()
     pictures = scrapy.Field()
     from_url = scrapy.Field()
-
+    company = scrapy.Field()
+    sell_tel = scrapy.Field()

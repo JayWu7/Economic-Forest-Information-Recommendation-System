@@ -1,6 +1,6 @@
 from scrapy.spiders import Spider
 from scrapy import FormRequest, Request
-from ..items import CrawelsDemandItem
+from ..items import CrawelsDemandItem,CrawelsPlantsItem
 import json
 
 
@@ -42,8 +42,8 @@ class SupplyCrawl(Spider):
             form_data = {'pageNo': str(i), 'rows': '20'}
             yield FormRequest(url=url, formdata=form_data, callback=self.parse_page)
 
-    def parse_page(self, Response):
-        supply_list = json.loads(Response.text)
+    def parse_page(self, response):
+        supply_list = json.loads(response.text)
         if 'supplyList' in supply_list.keys():
             for plant in supply_list.get('supplyList'):
                 if 'barcode2D' in plant.keys():
@@ -51,6 +51,8 @@ class SupplyCrawl(Spider):
                         url='http://www.itaomiao.com/supply/supplyInfo.itm?code={code}'.format(code = plant.get('barcode2D')),
                         callback=self.parse_plant)
 
-    def parse_plant(self, Response):
-        #todo  create item
-        print(Response.text)
+    def parse_plant(self, response):
+        item = CrawelsPlantsItem()
+        item['name'] = response.xpath('//input[@id="mainVariety"]/@value').get()
+        print(item)
+
