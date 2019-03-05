@@ -47,10 +47,14 @@ class SupplyCrawl(Spider):
         if 'supplyList' in supply_list.keys():
             for plant in supply_list.get('supplyList'):
                 if 'barcode2D' in plant.keys():
-                    yield Request(
+                    request =  Request(
                         url='http://www.itaomiao.com/supply/supplyInfo.itm?code={code}'.format(
                             code=plant.get('barcode2D')),
                         callback=self.parse_plant)
+                    request.meta['code'] = plant.get('barcode2D')
+                    yield request
+
+
 
     def parse_plant(self, response):
         item = CrawelsPlantsItem()
@@ -63,10 +67,11 @@ class SupplyCrawl(Spider):
         item['total_amount'] = response.xpath('//span[@id="plants_amout_lable"]/text()').get().strip()
         item['start_sell_num'] = response.xpath('/html/body/div[3]/div[1]/div/div[3]/ul/li[6]/text()[2]').re_first('[\d]+')
         item['price'] = response.xpath('/html/body/div[3]/div[1]/div/div[3]/div[1]/span/text()').get().strip()
-        #todo crawl pictures
+        item['pictures'] = response.xpath('//span[@class="imgInfoPic"]/img/@src').getall()
         item['from_url'] = response.url
+        item['barcode2D'] = response.meta['code']
         item['company'] = response.xpath('//p[@class="product_com_name"]/@title').get()
         item['sell_tel'] = response.xpath('/html/body/div[3]/div[1]/div/div[1]/div[2]/ul/li[3]').re_first('([\d]{11})')
-
+        yield item
 
 

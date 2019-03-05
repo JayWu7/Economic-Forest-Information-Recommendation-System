@@ -5,6 +5,10 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import pymongo
+from scrapy import Request
+from urllib.request import urlopen
+
+
 
 class MongoPipeline(object):
 
@@ -24,6 +28,7 @@ class MongoPipeline(object):
         self.db = self.client[self.mongo_db]
 
     def process_item(self, item, spider):
+        self.download_pic(item['pictures'],item['barcode2D'])
         name = item.__class__.__name__
         self.db[name].insert(dict(item))
         return item
@@ -32,3 +37,21 @@ class MongoPipeline(object):
         self.client.close()
 
 
+    def download_pic(self,urls,code):
+
+        for index,url in enumerate(urls):
+            print('正在下载图片: {}'.format(code))
+            pic_name = '{0}/pic_{1}_{2}.{3}'.format('../pictures',code,index,'jpg')
+            content = urlopen(url).read()
+            with open(pic_name, 'wb') as f:
+                f.write(content)
+                f.close()
+
+
+# class ImagesPipeline(ImagesPipeline):
+#
+#     def get_media_requests(self,item,info):
+#         for image_url in item['pictures']:
+#             yield Request(image_url)
+#
+#     def item_completed(self, results, item, info):

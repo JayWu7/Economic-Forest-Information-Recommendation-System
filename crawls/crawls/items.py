@@ -36,3 +36,4 @@ class CrawelsPlantsItem(scrapy.Item):
     from_url = scrapy.Field()
     company = scrapy.Field()
     sell_tel = scrapy.Field()
+    barcode2D = scrapy.Field()
