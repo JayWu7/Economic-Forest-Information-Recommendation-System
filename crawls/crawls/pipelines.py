@@ -5,9 +5,37 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import pymongo
-from scrapy import Request
 from urllib.request import urlopen
+import re,os
+from .settings import PICTURE_STORE
 
+
+class CleanInfoPipeline():
+    def process_item(self,item,spider):
+        if item['info']:
+            for index,field in enumerate(item['info']):
+                if '\t' in field or '\r' in field or '\n' in field:
+                    item['info'][index] = re.sub('[\t\n\r]','',field)
+        print(item['info'])
+        return item
+
+
+
+class DownloadPicsPipeline():
+    def process_item(self, item, spider):
+        self.download_pic(item['pictures'],item['barcode2D'])
+        return item
+
+    def download_pic(self,urls,code):
+        dir = PICTURE_STORE + '/' + code
+        os.mkdir(dir)
+        for index,url in enumerate(urls):
+            print('正在下载图片: {}'.format(code))
+            pic_name = '{0}/pic_{1}.{2}'.format(dir,index,'jpg')
+            content = urlopen(url).read()
+            with open(pic_name, 'wb') as f:
+                f.write(content)
+                f.close()
 
 
 class MongoPipeline(object):
@@ -28,7 +56,6 @@ class MongoPipeline(object):
         self.db = self.client[self.mongo_db]
 
     def process_item(self, item, spider):
-        self.download_pic(item['pictures'],item['barcode2D'])
         name = item.__class__.__name__
         self.db[name].insert(dict(item))
         return item
@@ -36,22 +63,3 @@ class MongoPipeline(object):
     def close_spider(self, spider):
         self.client.close()
 
-
-    def download_pic(self,urls,code):
-
-        for index,url in enumerate(urls):
-            print('正在下载图片: {}'.format(code))
-            pic_name = '{0}/pic_{1}_{2}.{3}'.format('../pictures',code,index,'jpg')
-            content = urlopen(url).read()
-            with open(pic_name, 'wb') as f:
-                f.write(content)
-                f.close()
-
-
-# class ImagesPipeline(ImagesPipeline):
-#
-#     def get_media_requests(self,item,info):
-#         for image_url in item['pictures']:
-#             yield Request(image_url)
-#
-#     def item_completed(self, results, item, info):

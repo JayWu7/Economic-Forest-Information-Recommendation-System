@@ -62,7 +62,7 @@ class SupplyCrawl(Spider):
         item['name'] = response.xpath('//h1/text()').getall()[-1].strip()
         item['other_name'] = response.xpath('//h1/p[1]/text()').get()
         item['area'] = response.xpath('/html/body/div[3]/div[1]/div/div[3]/ul/li[3]/span/text()').get()
-        item['info'] = response.xpath('//div[@class="ppi_plantsInfo"]/span[position()>1]/text()').getall()
+        item['info'] = response.xpath('//div[@class="ppi_plantsInfo"]/span/text()').getall()
         item['post_time'] = response.xpath('/html/body/div[3]/div[1]/div/div[3]/ul/li[4]/span/text()').get().strip()
         item['total_amount'] = response.xpath('//span[@id="plants_amout_lable"]/text()').get().strip()
         item['start_sell_num'] = response.xpath('/html/body/div[3]/div[1]/div/div[3]/ul/li[6]/text()[2]').re_first('[\d]+')

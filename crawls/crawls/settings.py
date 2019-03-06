@@ -14,6 +14,7 @@ BOT_NAME = 'crawls'
 SPIDER_MODULES = ['crawls.spiders']
 NEWSPIDER_MODULE = 'crawls.spiders'
 
+PICTURE_STORE = '/home/jaywu/Documents/EconomicForest/Economic-Forest-Information-Recommendation-System/pictures'
 
 MONGO_URI='localhost'
 MONGO_DB='itao'
@@ -68,7 +69,9 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
+   'crawls.pipelines.CleanInfoPipeline':280,
    'crawls.pipelines.MongoPipeline': 300,
+   'crawls.pipelines.DownloadPicsPipeline': 350,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
