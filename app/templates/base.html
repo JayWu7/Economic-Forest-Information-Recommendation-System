@@ -1,74 +1,81 @@
-{% extends "bootstrap/base.html" %}
-
-
+{% from 'bootstrap/nav.html' import render_nav_item %}
+<!DOCTYPE html>
+<html lang="en">
 {% block head %}
-<title>Eco-Forest {% block title %}{% endblock title %}</title>
-{{ super() }}
-<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
-
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Eco-Forest {% block title %}{% endblock title %}</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    {{ bootstrap.load_css() }}
+</head>
 {% endblock %}
+<body>
+    {% block navbar %}
+    <nav class="navbar navbar-inverse ">
+        <div class="container">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a style="font-size:30px" class="navbar-brand " href=" {{ url_for('main.index') }} ">首页</a>
+                </div>
 
-{% block navbar %}
-<nav class="navbar navbar-inverse ">
-    <div class="container">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a style="font-size:30px" class="navbar-brand " href=" {{ url_for('main.index') }} ">首页</a>
-            </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav " style="font-size: 25px">
+                        <li><a href="#">买林 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">卖林</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" style="font-size: 25px">
+                        {% if current_user.is_authenticated %}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                账户 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu" style="text-align: center">
+                                <li><a href="{{ url_for('auth.change_password') }}">修改密码</a></li>
+                                <li><a href="{{ url_for('auth.change_email_request') }}">修改邮箱</a></li>
+                                <li role="separator" class="divider">
+                                    <li><a href="{{ url_for('auth.logout') }}">登出</a></li>
+                                </li>
+                            </ul>
+                        </li>
+                        {% else %}
+                        <li><a href="{{ url_for('auth.login') }}">登录</a></li>
+                        {% endif %}
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </div>
+    </nav>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav " style="font-size: 25px">
-                    <li><a href="#">买林 <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">卖林</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right" style="font-size: 25px">
-                    {% if current_user.is_authenticated %}
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            账户 <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu" style="text-align: center">
-                            <li><a href="{{ url_for('auth.change_password') }}">修改密码</a></li>
-                            <li><a href="{{ url_for('auth.change_email_request') }}">修改邮箱</a></li>
-                            <li role="separator" class="divider">
-                                <li><a href="{{ url_for('auth.logout') }}">登出</a></li>
-                            </li>
-                        </ul>
-                    </li>
-                    {% else %}
-                    <li><a href="{{ url_for('auth.login') }}">登录</a></li>
-                    {% endif %}
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+    {% endblock %}
+
+    {% block content %}
+    <div classs="container">
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning">
+            <button type="button" class="close" data-dismiss="alert"></button>
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% block page_content %} {% endblock %}
+
     </div>
-</nav>
-
-{% endblock %}
-
-{% block content %}
-<div classs="container">
-    {% for message in get_flashed_messages() %}
-    <div class="alert alert-warning">
-        <button type="button" class="close" data-dismiss="alert"></button>
-        {{ message }}
-    </div>
-    {% endfor %}
-
-    {% block page_content %} {% endblock %}
-</div>
-{% endblock %}
-
-{% block scripts %}
-{{ super() }}
-{% endblock %}}
+    {% endblock %}
+    <footer class="text-center">
+        {% block footer %}
+            <small> &copy; 2018 <a href="http://greyli.com" title="Written by Grey Li">Grey Li</a>
+            </small>
+        {% endblock %}
+    </footer>
+{{ bootstrap.load_js() }}
+</body>
+</html>
