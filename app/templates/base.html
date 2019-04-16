@@ -11,71 +11,62 @@
 </head>
 {% endblock %}
 <body>
-    {% block navbar %}
-    <nav class="navbar navbar-inverse ">
-        <div class="container">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a style="font-size:30px" class="navbar-brand " href=" {{ url_for('main.index') }} ">首页</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="{{ url_for('main.index') }}">Eco-Forest</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item ">
+                <a class="nav-link" href="#">Plants <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Orders</a>
+            </li>
+            {% if current_user.is_authenticated %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Account
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ url_for('auth.change_password') }}">Change password</a>
+                    <a class="dropdown-item" href="{{ url_for('auth.change_email_request') }}">Update email</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{ url_for('auth.logout') }}">Log out</a>
                 </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav " style="font-size: 25px">
-                        <li><a href="#">买林 <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">卖林</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right" style="font-size: 25px">
-                        {% if current_user.is_authenticated %}
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                账户 <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu" style="text-align: center">
-                                <li><a href="{{ url_for('auth.change_password') }}">修改密码</a></li>
-                                <li><a href="{{ url_for('auth.change_email_request') }}">修改邮箱</a></li>
-                                <li role="separator" class="divider">
-                                    <li><a href="{{ url_for('auth.logout') }}">登出</a></li>
-                                </li>
-                            </ul>
-                        </li>
-                        {% else %}
-                        <li><a href="{{ url_for('auth.login') }}">登录</a></li>
-                        {% endif %}
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </div>
-    </nav>
-
-    {% endblock %}
-
-    {% block content %}
-    <div classs="container">
-        {% for message in get_flashed_messages() %}
-        <div class="alert alert-warning">
-            <button type="button" class="close" data-dismiss="alert"></button>
-            {{ message }}
-        </div>
-        {% endfor %}
-        {% block page_content %} {% endblock %}
-
+            </li>
+            {% else %}
+            <li class="nav-item active"><a class="nav-link" href="{{ url_for('auth.login') }}">Log in</a></li>
+            {% endif %}
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
     </div>
-    {% endblock %}
-    <footer class="text-center">
-        {% block footer %}
-            <small> &copy; 2018 <a href="http://greyli.com" title="Written by Grey Li">Grey Li</a>
-            </small>
-        {% endblock %}
-    </footer>
+</nav>
+{% block content %}
+<div classs="container">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert"></button>
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% block page_content %} {% endblock %}
+
+</div>
+{% endblock %}
+<!--    <footer class="text-center">-->
+<!--        {% block footer %}-->
+<!--            <small> &copy; 2018 <a href="http://greyli.com" title="Written by Grey Li">Grey Li</a>-->
+<!--            </small>-->
+<!--        {% endblock %}-->
+<!--    </footer>-->
 {{ bootstrap.load_js() }}
 </body>
 </html>
