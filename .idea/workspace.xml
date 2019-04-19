@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b190d2d-cfe7-41f3-8ef3-78462fd26bca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/auth/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/auth/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/change_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/auth/reset_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/auth/reset_password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawls/crawls/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawls/crawls/pipelines.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,31 +24,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/main/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="37" column="58" lean-forward="true" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+            <state relative-caret-position="165">
+              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/main/views.py">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="339">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/auth/views.py">
+        <entry file="file://$PROJECT_DIR$/app/templates/main/buy_plants.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-260">
-              <folding>
-                <element signature="e#0#68#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/_plants.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/_macros.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="666">
+              <caret line="72" column="47" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -55,8 +80,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -86,9 +111,6 @@
         <option value="$PROJECT_DIR$/app/main/view.py" />
         <option value="$PROJECT_DIR$/app/main/__init__.py" />
         <option value="$PROJECT_DIR$/flasky.py" />
-        <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/app/models.py" />
-        <option value="$PROJECT_DIR$/app/auth/views.py" />
         <option value="$PROJECT_DIR$/app/auth/forms.py" />
         <option value="$PROJECT_DIR$/crawel/config.py" />
         <option value="$PROJECT_DIR$/crawel/spider.py" />
@@ -108,24 +130,32 @@
         <option value="$PROJECT_DIR$/test/test.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/crawls/crawls/spiders/itao_spider.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/crawls/crawls/settings.py" />
-        <option value="$PROJECT_DIR$/crawls/crawls/pipelines.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/templates/auth/login.html" />
         <option value="$PROJECT_DIR$/app/templates/auth/reset_password.html" />
         <option value="$PROJECT_DIR$/app/templates/auth/change_password.html" />
-        <option value="$PROJECT_DIR$/app/templates/base.html" />
-        <option value="$PROJECT_DIR$/app/templates/main/index.html" />
+        <option value="$PROJECT_DIR$/crawls/crawls/pipelines.py" />
+        <option value="$PROJECT_DIR$/app/auth/views.py" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/app/__init__.py" />
+        <option value="$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py" />
         <option value="$PROJECT_DIR$/app/main/views.py" />
+        <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/app/templates/_macros.html" />
+        <option value="$PROJECT_DIR$/app/templates/base.html" />
+        <option value="$PROJECT_DIR$/app/templates/main/buy_plants.html" />
+        <option value="$PROJECT_DIR$/app/templates/_plants.html" />
+        <option value="$PROJECT_DIR$/app/templates/main/index.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="89" />
+    <option name="y" value="74" />
     <option name="width" value="1280" />
-    <option name="height" value="727" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -151,12 +181,13 @@
               <item name="Economic-Forest-Information-Recommendation-System" type="b2602c69:ProjectViewProjectNode" />
               <item name="Economic-Forest-Information-Recommendation-System" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Economic-Forest-Information-Recommendation-System" type="b2602c69:ProjectViewProjectNode" />
               <item name="Economic-Forest-Information-Recommendation-System" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -169,16 +200,19 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/static" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/crawls/crawls/spiders" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/templates/main" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/static" />
+      <recent name="$PROJECT_DIR$/crawls/crawls/spiders" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -193,7 +227,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test (1)">
+  <component name="RunManager" selected="Python.models">
     <configuration name="class_B" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Economic-Forest-Information-Recommendation-System" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -236,7 +270,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="items" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Economic-Forest-Information-Recommendation-System" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -244,11 +278,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crawls/crawls" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawls/crawls/items.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/models.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -301,11 +335,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.models" />
         <item itemvalue="Python.test (1)" />
         <item itemvalue="Python.class_B" />
         <item itemvalue="Python.flasky" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.items" />
       </list>
     </recent_temporary>
   </component>
@@ -332,22 +366,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="727" extended-state="0" />
+    <frame x="89" y="74" width="1280" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919742" visible="true" weight="0.2025417" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919742" visible="true" weight="0.20969023" />
       <window_info id="Structure" order="1" sideWeight="0.5008026" side_tool="true" weight="0.14932486" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33417085" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.408" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40694007" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32857144" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32891247" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.52913386" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.26182964" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32914573" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -389,30 +423,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/scrapy/settings/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/crawl/crawl/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/crawl/crawl/items.py" />
-    <entry file="file://$PROJECT_DIR$/spider.py" />
-    <entry file="file://$PROJECT_DIR$/crawls/crawls/spiders/getIndexPurchaseList.json" />
-    <entry file="file://$PROJECT_DIR$/crawls/crawls/spiders/convert_json.py" />
-    <entry file="file:///usr/lib/python3.6/json/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/scrapy/crawler.py" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/scrapy/http/request/form.py" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/pymongo/mongo_client.py" />
-    <entry file="file://$PROJECT_DIR$/crawls/crawls/spiders/test_mongo.py" />
-    <entry file="file://$PROJECT_DIR$/crawls/crawls/spiders/itao_demand.py" />
-    <entry file="file:///usr/lib/python3.6/urllib/__init__.py" />
-    <entry file="file:///usr/lib/python3.6/urllib/request.py" />
-    <entry file="file://$PROJECT_DIR$/crawls/crawls/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawls/crawls/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="83" column="45" lean-forward="true" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py" />
     <entry file="file://$PROJECT_DIR$/pictures/pic_0000000000032333.jpg" />
     <entry file="file://$PROJECT_DIR$/pictures/pic_0000000000032306.jpg" />
@@ -422,13 +432,6 @@
     <entry file="file://$PROJECT_DIR$/pictures/pic_0000000000032342_3.jpg" />
     <entry file="file://$PROJECT_DIR$/pictures/pic_S653361551711189004_1.jpg" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/scrapy/http/request/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4519">
-          <caret line="793" selection-start-line="793" selection-end-line="793" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/class_A.py" />
     <entry file="file://$PROJECT_DIR$/test/test.py" />
     <entry file="file://$PROJECT_DIR$/test/class_B.py" />
@@ -439,13 +442,6 @@
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawls/crawls/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
@@ -478,13 +474,6 @@
     <entry file="file://$PROJECT_DIR$/pics/0000000000580067/pic_3.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawls/crawls/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
@@ -492,27 +481,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawls/crawls/spiders/itao_spider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="30" selection-start-column="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawls/crawls/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="71" lean-forward="true" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
-          <folding>
-            <element signature="e#193#207#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -544,46 +516,168 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+    <entry file="file://$PROJECT_DIR$/app/main/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawls/crawls/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="498">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawls/crawls/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-393">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#169#195#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/crawls/crawls/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/local/Cellar/python3/3.6.4_2/Frameworks/Python.framework/Versions/3.6/lib/python3.6/datetime.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+        <state relative-caret-position="-1570">
+          <caret line="707" column="19" lean-forward="true" selection-start-line="707" selection-start-column="19" selection-end-line="707" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/main/index.html">
+    <entry file="file://$PROJECT_DIR$/crawls/crawls/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="37" column="58" lean-forward="true" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+        <state relative-caret-position="111">
+          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding>
+            <element signature="e#193#207#0" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pics/0000000000032306/pic_0.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pics/0000000000032306/pic_2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pics/0000000000032306/pic_3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pics/S653361551516603546/pic_0.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pics/S653361551516603546/pic_1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask_sqlalchemy/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask_sqlalchemy/_compat.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/auth/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-260">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="327" column="30" lean-forward="true" selection-start-line="324" selection-start-column="4" selection-end-line="327" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/flask/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="215" column="4" selection-start-line="215" selection-start-column="4" selection-end-line="215" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" />
           <folding>
-            <element signature="e#0#68#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/main/buy_plants.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/_plants.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/_macros.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="72" column="47" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/main/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>

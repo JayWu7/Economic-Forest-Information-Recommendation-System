@@ -57,7 +57,21 @@
         {{ message }}
     </div>
     {% endfor %}
-    {% block page_content %} {% endblock %}
+    <main role="main">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">Economic Forest</h1>
+                <p class="lead text-muted">The economic forest are the forest trees with the main purpose of producing
+                    fruit,
+                    edible oil, industrial raw materials and medicinal materials.</p>
+                <p>
+                    <a href="#" class="btn btn-primary my-2">Plants information</a>
+                    <a href="#" class="btn btn-info my-2">Orders information</a>
+                </p>
+            </div>
+        </section>
+        {% block page_content %} {% endblock %}
+    </main>
 
 </div>
 {% endblock %}
@@ -67,6 +81,9 @@
 <!--            </small>-->
 <!--        {% endblock %}-->
 <!--    </footer>-->
+{% block scripts %}
 {{ bootstrap.load_js() }}
+{{ moment.include_moment() }}
+{% endblock %}
 </body>
 </html>

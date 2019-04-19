@@ -93,6 +93,7 @@ venv.bak/
 #media resources
 pictures/
 pics/
+*.jpg
 
 # Spyder project settings
 .spyderproject
@@ -106,3 +107,4 @@ pics/
 
 # mypy
 .mypy_cache/
+

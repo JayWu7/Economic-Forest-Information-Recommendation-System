@@ -1,0 +1,34 @@
+{% macro pagination_widget(pagination, endpoint) %}
+<ul class="pagination justify-content-center">
+    <li class ="page-item {% if not pagination.has_prev %} {{ disable }}{% endif %}">
+        <a class="page-link" href="{% if pagination.has_prev %}{{ url_for(endpoint,
+page = pagination.page - 1, **kwargs) }}{% else %}#{% endif %}">
+            Previous
+        </a>
+    </li>
+    {% for p in pagination.iter_pages() %}
+        {%if p%}
+            {% if p == pagination.page %}
+            <li class="page-item active">
+                <span class="page-link">{{p}}
+                    <span class="sr-only">(current)</span>
+                </span>
+            </li>
+            {% else %}
+            <li class="page-item">
+                <a class="page-link" href="{{ url_for(endpoint, page = p, **kwargs) }}">{{ p }}</a>
+            </li>
+            {% endif %}
+        {% else %}
+            <li class="disabled page-item"><a class="page-link" href="#">&hellip;</a></li>
+        {% endif %}
+    {% endfor %}
+    <li class ="page-item {% if not pagination.has_next %} {{ disable }} {% endif %}">
+        <a class="page-link" href="{% if pagination.has_next %}{{ url_for(endpoint,
+page = pagination.page + 1, **kwargs) }}{% else %}#{% endif %}">
+            Next
+        </a>
+    </li>
+</ul>
+{% endmacro %}
+

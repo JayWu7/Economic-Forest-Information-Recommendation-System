@@ -6,7 +6,8 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import pymongo
 from urllib.request import urlopen
-import re, os
+import re
+import os
 from .settings import PIC_DIRECTORY
 
 class CleanInfoPipeline():
