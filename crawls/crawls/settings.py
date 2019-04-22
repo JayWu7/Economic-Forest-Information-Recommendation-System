@@ -19,6 +19,16 @@ PICTURE_STORE = '/home/jaywu/Documents/EconomicForest/Economic-Forest-Informatio
 MONGO_URI='localhost'
 MONGO_DB='itao'
 
+#spider start_page and end_page
+
+# demands item
+D_START = 1
+D_STOP = 50
+
+#plants item
+P_START = 1
+P_STOP = 50
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'crawls (+http://www.yourdomain.com)'
 

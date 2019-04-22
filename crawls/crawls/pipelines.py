@@ -16,7 +16,7 @@ class CleanInfoPipeline():
             for index,field in enumerate(item['info']):
                 if '\t' in field or '\r' in field or '\n' in field:
                     item['info'][index] = re.sub('[\t\n\r]','',field)
-        print(item['info'])
+        #print(item['info'])
         return item
 
 
@@ -35,7 +35,6 @@ class DownloadPicsPipeline():
             content = urlopen(url).read()
             with open(pic_name, 'wb') as f:
                 f.write(content)
-                f.close()
 
 
 class MongoPipeline(object):
