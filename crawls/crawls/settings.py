@@ -14,7 +14,7 @@ BOT_NAME = 'crawls'
 SPIDER_MODULES = ['crawls.spiders']
 NEWSPIDER_MODULE = 'crawls.spiders'
 
-PICTURE_STORE = '/home/jaywu/Documents/EconomicForest/Economic-Forest-Information-Recommendation-System/pictures'
+PIC_DIRECTORY= '../../pics'
 
 MONGO_URI='localhost'
 MONGO_DB='itao'

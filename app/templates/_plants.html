@@ -1,0 +1,31 @@
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            {% for plant in plants %}
+            <div class="col-md-4 bg-light">
+                <div class="card mb-4 shadow-sm">
+                    <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                         src="static/{{ plant['barcode2D'] }}/pic_0.jpg">
+                    <div class="card-body">
+                        <h6 class="card-title " bgcolor="red">{{ plant['name'] }}</h6>
+                        <p class="card-text badge badge-info">单价：{{ plant['price'] }}</p>
+                        <p class="card-text badge badge-success">库存：{{ plant['total_amount'] }}</p>
+                        <p class="card-text badge badge-warning">起售量：{{ plant['start_sell_num'] }}</p>
+                        <p class="card-text badge badge-light">地址：{{ plant['area'] }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                            </div>
+                            <small class="text-muted">{{ plant['post_time'] }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="container">
+    {{ macros.pagination_widget(pagination, '.index') }}
+</div>
