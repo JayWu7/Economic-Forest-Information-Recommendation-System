@@ -14,7 +14,7 @@ BOT_NAME = 'crawls'
 SPIDER_MODULES = ['crawls.spiders']
 NEWSPIDER_MODULE = 'crawls.spiders'
 
-PIC_DIRECTORY= '../../pics'
+PIC_DIRECTORY= '../../app/static/'
 
 MONGO_URI='localhost'
 MONGO_DB='itao'
@@ -27,7 +27,7 @@ D_STOP = 50
 
 #plants item
 P_START = 1
-P_STOP = 50
+P_STOP = 10
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'crawls (+http://www.yourdomain.com)'

@@ -15,12 +15,8 @@ class CleanInfoPipeline():
         if spider.name == 'itao_supply' and item['info']:
             for index, field in enumerate(item['info']):
                 if '\t' in field or '\r' in field or '\n' in field:
-<<<<<<< HEAD
                     item['info'][index] = re.sub('[\t\n\r]','',field)
-        #print(item['info'])
-=======
                     item['info'][index] = re.sub('[\t\n\r]', '', field)
->>>>>>> origin
         return item
 
 
@@ -31,10 +27,10 @@ class DownloadPicsPipeline():
         return item
 
     def download_pic(self, urls, code):
-        dir = PIC_DIRECTORY + '/' + code
+        dir = PIC_DIRECTORY + code
         os.mkdir(dir)
         for index, url in enumerate(urls):
-            print('正在下载图片: {}'.format(code))
+            print('正在下载图片: {}_{}'.format(code,index))
             pic_name = '{0}/pic_{1}.{2}'.format(dir, index, 'jpg')
             content = urlopen(url).read()
             with open(pic_name, 'wb') as f:

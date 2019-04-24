@@ -11,3 +11,15 @@ def index():
     page = request.args.get('page', 1, type=int)
     plants = Plants(mongo, page)
     return render_template('main/index.html', plants=plants.cur_page, pagination=plants.pagination)
+
+
+@main.route('/supply')
+def supply():
+    page = request.args.get('page', 1, type=int)
+    plants = Plants(mongo, page)
+    return render_template('main/supply.html', plants=plants.cur_page, pagination=plants.pagination)
+
+
+@main.route('/order')
+def order():
+    return render_template('main/order.html')
