@@ -3,6 +3,7 @@ from flask_login import UserMixin
 from config import PLANTS_COLLECTION as pc
 from config import DEMAND_COLLECTION as dc
 from config import PER_PAGE_PLANTS
+from config import PER_PAGE_ORDERS
 
 
 class User(db.Model, UserMixin):
@@ -109,25 +110,19 @@ class Pagination:
 class Plants:
     collection = pc
 
-    # def __init__(self, items_dic):
-    #     self.title = items_dic['title']
-    #     self.name = items_dic['name']
-    #     self.other_name = items_dic['other_name']
-    #     self.area = items_dic['area']
-    #     self.info = items_dic['info']
-    #     self.post_time = items_dic['post_time']
-    #     self.total_amount = items_dic['total_amount']
-    #     self.start_sell_num = items_dic['start_sell_num']
-    #     self.price = items_dic['price']
-    #     self.pictures = items_dic['pictures']
-    #     self.from_url = items_dic['from_url']
-    #     self.barcode2D = items_dic['barcode2D']
-    #     self.company = items_dic['name']
-    #     self.sell_tel = items_dic['sell_tel']
     def __init__(self, mongo, page=1):
         self.cursor = mongo.db[self.collection].find().sort('post_time', -1)
         self.pagination = Pagination(self.cursor, page, per_page=PER_PAGE_PLANTS)
         self.cur_page = self.pagination.items
 
-    def get_cur_plants(self, page=1):  # 获得当前页的plants
-        return self.pagination.items
+    # def get_cur_plants(self, page=1):  # 获得当前页的plants
+    #     return self.pagination.items
+
+
+class Orders:
+    collection = dc
+
+    def __init__(self, mongo, page=1):
+        self.cursor = mongo.db[self.collection].find().sort('stop_time', -1)
+        self.pagination = Pagination(self.cursor, page, per_page=PER_PAGE_ORDERS)
+        self.cur_page = self.pagination.items

@@ -1,9 +1,8 @@
 from flask import render_template, request, url_for
 from . import main
-from .. import mongo
 from datetime import datetime
-from ..models import Plants
-from app import app, mongo
+from ..models import Plants, Orders
+from app import mongo
 
 
 @main.route('/')
@@ -20,6 +19,10 @@ def supply():
     return render_template('main/supply.html', plants=plants.cur_page, pagination=plants.pagination)
 
 
-@main.route('/order')
-def order():
-    return render_template('main/order.html')
+@main.route('/purchase')
+def purchase():
+    page = request.args.get('page', 1, type=int)
+    orders = Orders(mongo, page)
+    current_time = str(datetime.now())
+    return render_template('main/purchase.html', orders=orders.cur_page, pagination=orders.pagination,
+                           current_time=current_time)

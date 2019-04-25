@@ -23,7 +23,7 @@
                 <a class="nav-link" href="{{ url_for('main.supply') }}">Plants <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('main.order') }}">Orders</a>
+                <a class="nav-link" href="{{ url_for('main.purchase') }}">Orders</a>
             </li>
             {% if current_user.is_authenticated %}
             <li class="nav-item dropdown">
@@ -66,7 +66,7 @@
                     edible oil, industrial raw materials and medicinal materials.</p>
                 <p>
                     <a href="{{ url_for('main.supply') }}" class="btn btn-primary my-2">Plants information</a>
-                    <a href="{{ url_for('main.order') }}" class="btn btn-info my-2">Orders information</a>
+                    <a href="{{ url_for('main.purchase') }}" class="btn btn-info my-2">Orders information</a>
                 </p>
             </div>
         </section>

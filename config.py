@@ -26,5 +26,7 @@ config = {
 PLANTS_COLLECTION = 'CrawelsPlantsItem'
 DEMAND_COLLECTION = 'CrawelsDemandItem'
 
-# nums of plant items show in one page, best be the multiple of 3
+# nums of plant and order items show in one page, best be the multiple of 3
 PER_PAGE_PLANTS = 15
+
+PER_PAGE_ORDERS = 12
