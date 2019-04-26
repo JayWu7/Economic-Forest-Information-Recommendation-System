@@ -3,7 +3,7 @@
         <div class="row">
             {% for order in orders %}
             {% if loop.index is odd %}
-            <div style="width:18rem; height:10rem" class="col-md-4 bg-light" >
+            <div class="col-md-4 bg-light" >
                 <div class="card mb-4 shadow-sm {% if order['stop_time'] is gt current_time %}
             {{ 'border-danger' }}
             {% endif %} border-primary">
@@ -34,8 +34,6 @@
             </div>
             {% endif %}
             {% endfor %}
-
-
         </div>
     </div>
 </div>

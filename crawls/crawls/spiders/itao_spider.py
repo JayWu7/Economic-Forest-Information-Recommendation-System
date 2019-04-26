@@ -63,7 +63,6 @@ class SupplyCrawl(Spider):
                         url='http://www.itaomiao.com/supply/supplyInfo.itm?code={code}'.format(
                             code=plant.get('barcode2D')),
                         callback=self.parse_plant)
-                    #request.meta['code'] = plant.get('barcode2D')
                     yield request
 
 
