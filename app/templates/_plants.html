@@ -14,8 +14,9 @@
                         <p class="card-text badge badge-light">地址：{{ plant['area'] }}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
+                                <a href="http://www.itaomiao.com/supply/supplyInfo.itm?code={{plant['barcode2D']}}">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button></a>
                             </div>
                             <small class="text-muted">{{ plant['post_time'] }}</small>
                         </div>
