@@ -1,11 +1,10 @@
 {% from 'bootstrap/nav.html' import render_nav_item %}
-<!DOCTYPE html>
 <html lang="en">
 {% block head %}
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Eco-Forest {% block title %}{% endblock title %}</title>
+    <title>Eco-Forest &nbsp;{% block title %}{% endblock title %}</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
     {{ bootstrap.load_css() }}
 </head>

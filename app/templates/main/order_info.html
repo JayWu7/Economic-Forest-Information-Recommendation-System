@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Order-{{ order['purchase_id'] }}{% endblock %}
+{% block page_content %}
+<body class="py-4">
+<div class="container">
+
+    <h1>{{ order['name'] }}</h1>
+    <p class="lead">{{ order['company'] }}</p>
+    <p>{{ order['other_info'] }}</p>
+    <h2 class="mt-4">需求单信息</h2>
+    <p></p>
+    <div class="row mb-3">
+        <div class="col-md-8 themed-grid-col">购买人：</div>
+        <div class="col-md-4 themed-grid-col">{{ order['buyer'] }}</div>
+    </div>
+    <hr class="my-4">
+    <div class="row mb-3">
+        <div class="col-md-8 themed-grid-col">电话：</div>
+        <div class="col-md-4 themed-grid-col">{{ order['buyer_tel'] }}</div>
+    </div>
+    <hr class="my-4">
+    <div class="row mb-3">
+        <div class="col-md-8 themed-grid-col">地点：</div>
+        <div class="col-md-4 themed-grid-col">{{ order['place'] }}</div>
+    </div>
+    <hr class="my-4">
+    <div class="row mb-3">
+        <div class="col-md-8 themed-grid-col">开始时间：</div>
+        <div class="col-md-4 themed-grid-col">{{ order['start_time'] }}</div>
+    </div>
+    <hr class="my-4">
+    <div>
+        <div class="row mb-3">
+            <div class="col-md-8 themed-grid-col">结束时间：</div>
+            <div class="col-md-4 themed-grid-col">{{ order['stop_time'] }}</div>
+        </div>
+    </div>
+    <hr class="my-4">
+    <h2 class="mt-4">购买种类</h2>
+    <p class="text-warning">{{ order['kinds'] }}</p>
+    <hr class="my-4">
+    <h3>原网页: &nbsp;&nbsp; <a href="{{ order['from_url'] }}"><span class="badge badge-dark">View</span></a></h3>
+    </div>
+</body>
+
+{% endblock %}

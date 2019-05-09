@@ -12,7 +12,7 @@
                         <h5 class="card-title">{{ order['name'] }}</h5>
                         <h7 class="card-subtitle mb-2 text-muted">{{ order['company'] }}</h7>
                         <pre class="card-text text-success">采购品种： {{ order['kinds'] }}</pre>
-                        <a href="#" class="btn btn-info">View</a>
+                        <a href="{{ url_for('main.order_info',id=order['purchase_id']) }}" class="btn btn-info">View</a>
                     </div>
                     <div class="card-footer text-secondary">报价截止日期： {{ order['stop_time'] }}</div>
                 </div>
@@ -27,7 +27,7 @@
                         <h5 class="card-title">{{ order['name'] }}</h5>
                         <h7 class="card-subtitle mb-2 text-muted">{{ order['company'] }}</h7>
                         <pre class="card-text text-info">采购品种： {{ order['kinds'] }}</pre>
-                        <a href="#" class="btn btn-success">View</a>
+                        <a href="{{ url_for('main.order_info',id=order['purchase_id']) }}" class="btn btn-success">View</a>
                     </div>
                     <div class="card-footer text-secondary">报价截止日期： {{ order['stop_time'] }}</div>
                 </div>
