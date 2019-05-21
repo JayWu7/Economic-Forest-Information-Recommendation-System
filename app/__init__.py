@@ -6,6 +6,7 @@ from flask_pymongo import PyMongo
 from flask_moment import Moment
 from config import config
 
+
 bootstrap = Bootstrap()
 db = SQLAlchemy()
 mongo = PyMongo()

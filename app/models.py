@@ -4,6 +4,7 @@ from config import PLANTS_COLLECTION as pc
 from config import DEMAND_COLLECTION as dc
 from config import PER_PAGE_PLANTS
 from config import PER_PAGE_ORDERS
+from config import PER_PAGE_SEARCH
 
 
 class User(db.Model, UserMixin):
@@ -115,9 +116,6 @@ class Plants:
         self.pagination = Pagination(self.cursor, page, per_page=PER_PAGE_PLANTS)
         self.cur_page = self.pagination.items
 
-    # def get_cur_plants(self, page=1):  # 获得当前页的plants
-    #     return self.pagination.items
-
 
 class Orders:
     collection = dc
@@ -125,4 +123,16 @@ class Orders:
     def __init__(self, mongo, page=1):
         self.cursor = mongo.db[self.collection].find().sort('stop_time', -1)
         self.pagination = Pagination(self.cursor, page, per_page=PER_PAGE_ORDERS)
+        self.cur_page = self.pagination.items
+
+
+class Search:
+
+    def __init__(self, mongo, key_word, collection, attribute, page=1):
+        self.cursor = mongo.db[collection].find({attribute:{'$regex':key_word}}) #使用pymongo正则搜索
+        if collection == pc:
+            self.cursor = self.cursor.sort('post_time', -1)
+        else:
+            self.cursor = self.cursor.sort('stop_time', -1)
+        self.pagination = Pagination(self.cursor, page, per_page=PER_PAGE_SEARCH)
         self.cur_page = self.pagination.items
