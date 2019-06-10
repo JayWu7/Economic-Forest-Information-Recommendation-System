@@ -5,7 +5,8 @@ from config import DEMAND_COLLECTION as dc
 from config import PER_PAGE_PLANTS
 from config import PER_PAGE_ORDERS
 from config import PER_PAGE_SEARCH
-
+from collections import deque
+from flask_login import current_user
 
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
@@ -16,8 +17,16 @@ class User(db.Model, UserMixin):
     mobile_phone = db.Column(db.String(11), unique=True)
     password = db.Column(db.String(20))
 
+    symbols = deque(maxlen=5)
+
     def verify_password(self, password):
         return self.password == password
+
+    def add_favorite(self, symbol):
+        if symbol in self.symbols:
+            self.symbols.remove(symbol)
+        self.symbols.append(symbol)
+
 
 
 @login_manager.user_loader
@@ -41,7 +50,10 @@ class Pagination:
     def _generate_items(self):  # 从数据库中取出当前页面的items
         former_items = (self.page - 1) * self.per_page
         items = self.cursor.skip(former_items).limit(self.per_page)
-        return items
+        # self._get_favorite()
+        return list(items)
+
+
 
     @property
     def pages(self):
@@ -115,6 +127,27 @@ class Plants:
         self.cursor = mongo.db[self.collection].find().sort('post_time', -1)
         self.pagination = Pagination(self.cursor, page, per_page=PER_PAGE_PLANTS)
         self.cur_page = self.pagination.items
+        if current_user.is_authenticated and page == 1:
+            self._get_favorite(mongo)
+
+
+    def _get_favorite(self, mongo):
+        favorite_items = []
+        for symbol in current_user.symbols:
+            items = Search(mongo, symbol, self.collection, 'name').cur_page
+            if items:
+                favorite_items.append(items[0])
+        self._update_cur_page(favorite_items[::-1])
+
+
+    def _update_cur_page(self, favorite_items):
+        ids = {item['barcode2D'] for item in favorite_items}
+        for item in self.cur_page:
+            if item['barcode2D'] in ids:
+                self.cur_page.remove(item)
+        self.cur_page = (favorite_items + self.cur_page)[:PER_PAGE_PLANTS]
+
+
 
 
 class Orders:
@@ -124,6 +157,24 @@ class Orders:
         self.cursor = mongo.db[self.collection].find().sort('stop_time', -1)
         self.pagination = Pagination(self.cursor, page, per_page=PER_PAGE_ORDERS)
         self.cur_page = self.pagination.items
+        if current_user.is_authenticated and page == 1:
+            self._get_favorite(mongo)
+
+    def _get_favorite(self, mongo):
+        favorite_items = []
+        for symbol in current_user.symbols:
+            items = Search(mongo, symbol, self.collection, 'kinds').cur_page
+            if items:
+                favorite_items.append(items[0])
+        self._update_cur_page(favorite_items[::-1])
+
+    def _update_cur_page(self, favorite_items):
+        ids = {item['purchase_id'] for item in favorite_items}
+        for item in self.cur_page:
+            if item['purchase_id'] in ids:
+                self.cur_page.remove(item)
+        self.cur_page = (favorite_items + self.cur_page)[:PER_PAGE_ORDERS]
+
 
 
 class Search:

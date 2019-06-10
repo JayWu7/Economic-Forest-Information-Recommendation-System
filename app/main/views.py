@@ -4,6 +4,7 @@ from datetime import datetime
 from ..models import Plants, Orders, Search
 from app import mongo
 from config import DEMAND_COLLECTION, PLANTS_COLLECTION
+from flask_login import current_user,login_required
 
 
 @main.route('/', methods=['GET', 'POST'])
@@ -48,6 +49,8 @@ def search():
 def search_supply():
     key_word = request.args.get('key_word')
     page = request.args.get('page', 1, type=int)
+    if current_user.is_authenticated:
+        current_user.add_favorite(key_word)
     content = Search(mongo, key_word, PLANTS_COLLECTION, 'name', page)
     return render_template('main/supply.html', plants=content.cur_page, pagination=content.pagination)
 
@@ -55,6 +58,8 @@ def search_supply():
 def search_purchase():
     key_word = request.args.get('key_word')
     page = request.args.get('page', 1, type=int)
+    if current_user.is_authenticated:
+        current_user.add_favorite(key_word)
     content = Search(mongo, key_word, DEMAND_COLLECTION, 'kinds', page)
     current_time = str(datetime.now())
     return render_template('main/purchase.html', orders=content.cur_page, pagination=content.pagination,

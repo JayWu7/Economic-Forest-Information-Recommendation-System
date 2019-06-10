@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% from 'bootstrap/form.html' import render_form %}
+
+{% block title %}Change Email{% endblock %}
+
+{% block page_content %}
+<div class="container">
+    <div class="page-header">
+        <h3>Reset Email</h3>
+    </div>
+    <div class="col-md-4">
+        {{ render_form(form) }}
+        <br>
+    </div>
+</div>
+{% endblock %}
+
+
